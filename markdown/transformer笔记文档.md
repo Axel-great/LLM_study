@@ -163,4 +163,4 @@ $$
 
 ​	将每次不同的头输入后得到最终Concat的Z，进行最后的Linear层矩阵大小的变换，输出最终的矩阵。
 
-![img](../../../typora_image/v2-6bdaf739fd6b827b2087b4e151c560f4_r.jpg)
+![v2-6bdaf739fd6b827b2087b4e151c560f4_r](assets/v2-6bdaf739fd6b827b2087b4e151c560f4_r.jpg)
