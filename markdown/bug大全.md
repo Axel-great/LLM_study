@@ -10,3 +10,13 @@
 [Pycharm与HuggingFace连接出现连接出现TLS/SSL connection has been closed (EOF) 问题的解决_huggingface-cli login-CSDN博客](https://blog.csdn.net/qq_59700461/article/details/134124983)
 
 [huggingface(_hub)下载load报错ConnectionError: Couldn‘t reach ‘fusing/fill50k‘ on the Hub (SSLError)解决指南！_dataset hub connectionerror-CSDN博客](https://blog.csdn.net/qq_36525741/article/details/134417772)
+
+### 2.Model无法加载问题
+
+​	此代码无法加载问题为transformer版本过低
+
+~~~~~~python
+from transformers import AutoTokenizer
+tokenizer = AutoTokenizer.from_pretrained("Qwen/Qwen2.5-0.5B-Instruct")
+~~~~~~
+
