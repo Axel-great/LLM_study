@@ -101,3 +101,18 @@ view(batch * seq_len, vocab_size)之后
 ~~~
 
 ​	使用交叉熵函数进行计算。logic矩阵先进行softmax，计算出tokens对应词汇表里面**每一个样本的概率**，在target里面查**看该tokens对应的真实概率**，最后进行Log计算，得出最后的loss值。
+
+### 5.ModuleList和Sequential
+
+- Sequential不需要调用forward()，可以直接执行
+- ModuleList需要在forward中进行for循环调用，仅仅只是一个列表
+
+### 6.self.apply()
+
+多用于正态分布初始化，初始化是为了防止反向传播的时候梯度消失或者梯度爆炸
+
+`nn.Module.apply(fn)` 是 `PyTorch` 提供的一个方法：
+
+- **会递归地遍历**模型及其所有子模块。
+- **对每个子模块执行 `fn(module)`**，其中 `fn` 是一个自定义的函数（这里是 `_init_weights`）。
+- 适用于初始化参数、修改 `requires_grad` 状态等。
